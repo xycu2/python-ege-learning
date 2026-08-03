@@ -8,3 +8,10 @@ print(num1 * num2)
 name = input("Введите имя: ")
 
 print('Здравствуйте,' + ' ' + name)
+
+# Task 3
+nameStudent = input()
+nameExam = input()
+points = input()
+
+print(nameStudent + ' ' + 'набрал' + ' ' + points + ' ' + 'баллов на экзамене по' + ' ' + nameExam + '!')
