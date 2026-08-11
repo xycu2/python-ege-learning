@@ -1,5 +1,6 @@
 count = 0
 
+
 for one in range(10):
     for two in range(10):
         for three in range(10):
