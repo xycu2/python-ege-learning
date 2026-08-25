@@ -1,31 +1,12 @@
-from fnmatch import  fnmatch
+from fnmatch import fnmatch
 
-def evenNumbers(num):
-    evenNum = 0
-
-    for n in num:
-        number = int(n)
-        if number % 2 == 0:
-            evenNum += 1
-
-    return  evenNum
-
-
-def oddNumbers(num):
-    oddNum = 0
-
-    for n in num:
-        number = int(n)
-
-        if number % 2 != 0:
-            oddNum += 1
-
-    return  oddNum
-
-for num in range(21025, 10 ** 10 + 1, 21025):
-    string = str(num)
-    if fnmatch(string, '12*34?5') and (evenNumbers(string) == oddNumbers(string)):
-        print(num, num // 21025)
+for num in range(21025, 10**10 + 1, 21025):
+    s = str(num)
+    if fnmatch(s, '12*34?5'):
+        evens = sum(1 for d in s if int(d) % 2 == 0)
+        odds = len(s) - evens
+        if evens == odds:
+            print(num, num // 21025)
 
 
 # 1214803475 57779
